@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">Crypto Tracker</div>
+        <div class="nav-links">
+            <a href="#" onclick="navigateTo('crypto-tracker/index.html')">Home</a>
+            <a href="#" onclick="navigateTo('favourite/index.html')">Favourites</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button onclick="performSearch()">Search</button>
+            <ul class="search-results" id="search-results"></ul>
+        </div>
+    </div>
+    <h1>Crypto Tracker</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Icon</th>
+                <th>Name</th>
+                <th id="price-header" class="sortable">Price</th>
+                <th id="volume-header" class="sortable">Volume</th>
+                <th>Market Cap</th>
+                <th>Favourites</th>
+            </tr>
+        </thead>
+        <tbody id="crypto-table">
+        </tbody>
+    </table>
+    <div class="pagination" id="pagination"></div>
+    <script src="script.js"></script>
+</body>
+</html>
